@@ -1,0 +1,282 @@
+
+.fabric-page {
+  display: grid;
+  gap: 20px;
+  color: #172033;
+}
+
+.fabric-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 26px;
+  border-radius: 18px;
+  background: linear-gradient(120deg, #eef2ff, #faf5ff);
+  border: 1px solid #e0e7ff;
+}
+
+.fabric-eyebrow {
+  color: #5145cd;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.fabric-heading h2 {
+  margin: 8px 0;
+  font-size: 27px;
+}
+
+.fabric-heading p,
+.fabric-inventory-heading p {
+  margin: 0;
+  color: #64748b;
+}
+
+.fabric-heading-icon {
+  display: grid;
+  place-items: center;
+  width: 62px;
+  height: 62px;
+  border-radius: 16px;
+  background: white;
+  font-size: 32px;
+}
+
+.fabric-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.fabric-stat,
+.fabric-panel {
+  padding: 22px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.045);
+}
+
+.fabric-stat span {
+  display: block;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.fabric-stat strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 25px;
+}
+
+.fabric-stat .stock-warning {
+  color: #c2410c;
+}
+
+.fabric-panel h3 {
+  margin: 0 0 18px;
+  font-size: 19px;
+}
+
+.fabric-form {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.fabric-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 650;
+  color: #475569;
+}
+
+.fabric-form input,
+.fabric-form select,
+.fabric-search {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 11px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  background: #fff;
+  color: #172033;
+  font: inherit;
+  outline: none;
+}
+
+.fabric-form input:focus,
+.fabric-form select:focus,
+.fabric-search:focus {
+  border-color: #635bdb;
+  box-shadow: 0 0 0 3px rgba(99, 91, 219, 0.12);
+}
+
+.fabric-form-actions {
+  display: flex;
+  align-items: end;
+  gap: 10px;
+  grid-column: 1 / -1;
+}
+
+.fabric-primary-btn,
+.fabric-secondary-btn,
+.fabric-edit-btn,
+.fabric-delete-btn {
+  padding: 10px 15px;
+  border: 0;
+  border-radius: 9px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.fabric-primary-btn {
+  color: white;
+  background: #5145cd;
+}
+
+.fabric-primary-btn:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.fabric-secondary-btn {
+  color: #334155;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+}
+
+.fabric-inventory-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.fabric-inventory-heading h3 {
+  margin-bottom: 5px;
+}
+
+.fabric-search {
+  margin-bottom: 16px;
+}
+
+.fabric-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.fabric-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.fabric-table th {
+  padding: 13px 12px;
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 12px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.fabric-table td {
+  padding: 15px 12px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 14px;
+}
+
+.fabric-table td small {
+  display: block;
+  margin-top: 5px;
+  color: #64748b;
+}
+
+.fabric-status {
+  display: inline-block;
+  padding: 6px 9px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.fabric-status.good {
+  color: #166534;
+  background: #dcfce7;
+}
+
+.fabric-status.low {
+  color: #9a3412;
+  background: #ffedd5;
+}
+
+.fabric-row-actions {
+  display: flex;
+  gap: 7px;
+}
+
+.fabric-edit-btn {
+  color: #4338ca;
+  background: #eef2ff;
+}
+
+.fabric-delete-btn {
+  color: #b91c1c;
+  background: #fee2e2;
+}
+
+.fabric-alert {
+  padding: 13px 16px;
+  border-radius: 10px;
+}
+
+.fabric-error {
+  color: #991b1b;
+  background: #fee2e2;
+}
+
+.fabric-success {
+  color: #166534;
+  background: #dcfce7;
+}
+
+.fabric-empty {
+  padding: 22px 0;
+  color: #64748b;
+}
+
+@media (max-width: 900px) {
+  .fabric-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .fabric-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .fabric-heading {
+    padding: 18px;
+  }
+
+  .fabric-heading h2 {
+    font-size: 22px;
+  }
+
+  .fabric-form {
+    grid-template-columns: 1fr;
+  }
+
+  .fabric-panel {
+    padding: 15px;
+  }
+}

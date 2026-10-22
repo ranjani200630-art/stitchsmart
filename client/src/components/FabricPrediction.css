@@ -1,0 +1,122 @@
+
+.prediction-page {
+  width: 100%;
+}
+
+.prediction-heading,
+.prediction-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.prediction-heading {
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.prediction-heading h2 {
+  margin: 0 0 8px;
+}
+
+.prediction-heading p,
+.prediction-card-top p {
+  color: #64748b;
+  margin: 0;
+}
+
+.prediction-count {
+  background: #e0e7ff;
+  color: #3730a3;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.prediction-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+.prediction-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.05);
+}
+
+.prediction-card-top h3 {
+  margin: 0 0 8px;
+  text-transform: capitalize;
+}
+
+.stock-badge {
+  display: inline-block;
+  padding: 6px 9px;
+  border-radius: 16px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.stock-available {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.stock-low {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.stock-restock {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.prediction-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.prediction-stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.prediction-stats span {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.prediction-stats strong {
+  color: #0f172a;
+  overflow-wrap: anywhere;
+}
+
+.prediction-error {
+  color: #b91c1c;
+}
+
+.prediction-note {
+  margin-top: 20px;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+@media (max-width: 480px) {
+  .prediction-card-top {
+    flex-direction: column;
+  }
+
+  .prediction-stats {
+    grid-template-columns: 1fr;
+  }
+}
